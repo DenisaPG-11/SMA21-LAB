@@ -10,3 +10,6 @@ Lab 5 - Topics of discussion
 ▪ Building and showing user notifications.
 ▪ Running code outside the activity with AsyncTask.
 
+Lab 6 - Topics of discussion
+▪ Data storage options
+▪ Introduction to Google Firebase: real-time database with NoSQL
