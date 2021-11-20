@@ -71,6 +71,9 @@ public class MainActivity extends AppCompatActivity {
                         monthlyExpense.month = monthName;
                         monthNames.add(monthName);
                     }
+
+                    eIncome.setText(String.valueOf(monthlyExpense.getIncome()));
+                    eExpenses.setText(String.valueOf(monthlyExpense.getExpenses()));
                 }
             }
 
