@@ -22,3 +22,11 @@ Lab 7 - Topics of discussion
 Task : Using last week's smart Wallet application, instead of manually searching using the
 bSearch and eSearch views, use a spinner that is automatically updated with the list
 of months from Firebase (at runtime)
+
+Lab8 - Topics of discussion
+• Handling data lists in Android
+• Custom adapters
+• Synchronizing a Firebase data list with a Listview
+
+Task : • Using last week's Smart Wallet application, create a new empty activity and set it as
+the launcher activity of the application (hint: edit the manifest file).
