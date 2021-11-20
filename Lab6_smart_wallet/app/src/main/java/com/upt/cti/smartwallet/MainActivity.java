@@ -1,18 +1,22 @@
 package com.upt.cti.smartwallet;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import model.MonthlyExpenses;
 
@@ -26,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     private String  currentMonth;
     private ValueEventListener databaseListener;
 
+    private  Spinner spinner;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,8 +42,42 @@ public class MainActivity extends AppCompatActivity {
         eIncome = (EditText) findViewById(R.id.eIncome);
         eExpenses = (EditText) findViewById(R.id.eExpenses);
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        databaseReference = database.getReference();
+        spinner = (Spinner) findViewById(R.id.spinner);
+
+        //data
+        final List<MonthlyExpenses> monthlyExpenses = new ArrayList<>();
+        final List<String> monthNames = new ArrayList<>();
+        monthNames.add("Months");
+
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        final ArrayAdapter<String> sAdapter = new ArrayAdapter<>(this,
+                android.R.layout.simple_spinner_item, monthNames);
+        // Specify the layout to use when the list of choices appears
+        sAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // Apply the adapter to the spinner
+        spinner.setAdapter(sAdapter);
+
+        databaseReference.child("Calendar").addListenerForSingleValueEvent( new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                for (DataSnapshot monthSnapshoot: dataSnapshot.getChildren()) {
+
+                    MonthlyExpenses monthlyExpense = dataSnapshot.getValue(MonthlyExpenses.class);
+
+                    String monthName = monthSnapshoot.child("calendar").getValue(String.class);
+
+                    if (monthName!=null){
+                        monthlyExpense.month = monthName;
+                        monthNames.add(monthName);
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+            }
+        });
     }
 
     public void clicked(View view) {
