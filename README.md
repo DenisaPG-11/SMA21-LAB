@@ -13,3 +13,12 @@ Lab 5 - Topics of discussion
 Lab 6 - Topics of discussion
 ▪ Data storage options
 ▪ Introduction to Google Firebase: real-time database with NoSQL
+
+Lab 7 - Topics of discussion
+• Data listeners for Firebase
+• Handling lists of data
+• Project planning & deadlines
+
+Task : Using last week's smart Wallet application, instead of manually searching using the
+bSearch and eSearch views, use a spinner that is automatically updated with the list
+of months from Firebase (at runtime)
