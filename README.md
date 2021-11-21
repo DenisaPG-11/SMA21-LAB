@@ -30,3 +30,11 @@ Lab8 - Topics of discussion
 
 Task : • Using last week's Smart Wallet application, create a new empty activity and set it as
 the launcher activity of the application (hint: edit the manifest file).
+
+lab 9 - Topics of discussion
+• Listeners on Listviews
+• Handling Firebase updates, saving the app state
+• Filtering data from the cloud
+
+Task : • Based on the Smart Wallet application from last week, implement the functionality to
+also create, update and delete payments from your MainActivity.
