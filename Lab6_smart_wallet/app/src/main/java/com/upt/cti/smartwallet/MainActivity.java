@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tStatus = (TextView) findViewById(R.id.tStatus);
+        tStatus = (TextView) findViewById(R.id.tStatus_n);
         eSearch = (EditText) findViewById(R.id.eSearch);
         eIncome = (EditText) findViewById(R.id.eIncome);
         eExpenses = (EditText) findViewById(R.id.eExpenses);

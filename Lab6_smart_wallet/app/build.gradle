@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdk 30
+    compileSdk 24
 
     defaultConfig {
         applicationId "com.upt.cti.smartwallet"
         minSdk 24
-        targetSdk 30
+        targetSdk 24
         versionCode 1
         versionName "1.0"
 
@@ -45,6 +45,12 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:9.4.0'
     implementation 'com.google.firebase:firebase-database:9.4.0'
 
+
+    implementation "androidx.cardview:cardview:1.0.0"
+
+    implementation 'com.android.support:cardview-v7:24.0.0'
+    implementation 'com.android.support:recyclerview-v7:24.0.0'
+    implementation 'com.android.support:design:24.0.0'
 
     // Add the dependencies for any other desired Firebase products
     // https://firebase.google.com/docs/android/setup#available-libraries
