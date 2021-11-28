@@ -38,3 +38,12 @@ lab 9 - Topics of discussion
 
 Task : • Based on the Smart Wallet application from last week, implement the functionality to
 also create, update and delete payments from your MainActivity.
+
+Lab 10: Topics of discussion
+• Offline persistence of data
+• Firebase offline capabilities
+• Determining a user's online presence
+
+Task : Based on the Smart Wallet application from last week, implement the functionality to
+make a local backup of the list of payments your receive from Firebase. Consequently,
+the app should run without internet (at least in read-mode). 
