@@ -29,7 +29,7 @@
                 android:textColor="@color/white" />
 
             <TextView
-                android:id="@+id/tName"
+                android:id="@+id/eName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -57,7 +57,7 @@
                 android:hint="Time: 11:15:05"/>
 
             <TextView
-                android:id="@+id/tCost"
+                android:id="@+id/eCost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -70,7 +70,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_below="@+id/tCost"
+                android:layout_below="@+id/eCost"
                 android:hint="food"
                 android:textStyle="italic"/>
         </RelativeLayout>

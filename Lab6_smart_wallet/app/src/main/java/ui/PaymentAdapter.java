@@ -39,11 +39,11 @@ public class PaymentAdapter extends ArrayAdapter<Payment> {
 
             view = inflater.inflate(layoutResID, parent, false);
             itemHolder.tIndex = (TextView) view.findViewById(R.id.tIndex);
-            itemHolder.tName = (TextView) view.findViewById(R.id.tName);
+            itemHolder.tName = (TextView) view.findViewById(R.id.eName);
             itemHolder.lHeader = (RelativeLayout) view.findViewById(R.id.lHeader);
             itemHolder.tDate = (TextView) view.findViewById(R.id.tDate);
             itemHolder.tTime = (TextView) view.findViewById(R.id.tTime);
-            itemHolder.tCost = (TextView) view.findViewById(R.id.tCost);
+            itemHolder.tCost = (TextView) view.findViewById(R.id.eCost);
             itemHolder.tType = (TextView) view.findViewById(R.id.tType);
 
             view.setTag(itemHolder);
