@@ -1,10 +1,13 @@
 package com.upt.cti.smartwallet;
 
-public class Payment {
+import java.io.Serializable;
+
+public class Payment implements Serializable {
     public String timestamp;
     private double cost;
     private String name;
     private String type;
+
 
     public Payment() {
         // Default constructor required for calls to DataSnapshot.getValue(User.class)

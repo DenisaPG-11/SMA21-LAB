@@ -80,7 +80,7 @@ public class AddPaymentActivity extends AppCompatActivity {
 
         //initialize UI
 
-       Payment payment = AppState.get().getCurentPayment();
+       Payment payment = AppState.get().getCurrentPayment();
         if (payment != null)
         {
             eName.setText(payment.getName());
@@ -104,5 +104,17 @@ public class AddPaymentActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), AddPaymentActivity.class));
             }
         });
+
+        if (!AppState.isNetworkAvailable(this)) {
+
+            if(AppState.get().hasLocalStorage(this)){
+                payments = ;
+                tStatus.setText("Found "+ payments.size() + "payments for " + Month.intToMonthName(currentMonth) + ".")
+            }
+            else {
+                Toast.makeText(this, "THis app needs an internet connection!", Toast.LENGTH_SHORT).show();
+
+            }
+        }
     }
 }
